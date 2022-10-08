@@ -1,3 +1,10 @@
 module.exports = {
-  transpileDependencies: true
+  transpileDependencies: true,
+  configureWebpack: {
+    resolve: {
+      fallback: {
+        timers: require.resolve("timers-browserify")
+      }
+    }
+  }
 }
